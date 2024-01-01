@@ -109,7 +109,7 @@ int main(int argc, char** argv)
     int dragon_length = 1;
     bool dragon_inverted = false;
 
-    if(argc > 1)
+    if(argc == 1)
     {
         dragon_length = atoi(argv[1]);
         if(dragon_length < 0)
@@ -121,6 +121,10 @@ int main(int argc, char** argv)
         {
             dragon_length = 100;
         }
+    }
+    else if(argc == 0)
+    {
+        dragon_length = 10;
     }
     else
     {
